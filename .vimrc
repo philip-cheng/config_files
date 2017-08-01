@@ -46,9 +46,20 @@ set incsearch
 set iskeyword+=_,$,@,%,#,-
 set laststatus=2
 set linespace=0
+
+" show hidden characters
 set list
+" hide hidden chars
+set nolist
 "set listchars=tab:\|\ ,extends:>,precedes:<,eol:$,trail:#
 set listchars=tab:>-,eol:$,trail:#
+" what particular chars they are displayed with
+:set lcs=tab:▒░,trail:▓
+" or
+:set listchars=tab:▒░,trail:▓
+" used \u2592\u2591 for tab and \u2593 for trailing spaces in line.
+" In Vim help they suggest using ">-" for tab and "-" for trail.
+
 set showmatch
 :match OverLength '\%101v.*'
 set nobackup
